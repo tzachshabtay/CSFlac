@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B94ED1E9-5AE9-4AC7-AC57-B3CC4A5095E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CSFlac</RootNamespace>
+    <AssemblyName>CSFlac</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FLAC\BlockingStrategy.cs" />
+    <Compile Include="FLAC\ChannelAssignment.cs" />
+    <Compile Include="FLAC\FlacConstant.cs" />
+    <Compile Include="FLAC\FlacException.cs" />
+    <Compile Include="FLAC\FlacFile.cs" />
+    <Compile Include="FLAC\FlacFrame.cs" />
+    <Compile Include="FLAC\FlacFrameHeader.cs" />
+    <Compile Include="FLAC\FlacFrameInformation.cs" />
+    <Compile Include="FLAC\FlacFrame_GetBuffer.cs" />
+    <Compile Include="FLAC\FlacLayer.cs" />
+    <Compile Include="FLAC\FlacPartitionedRice.cs" />
+    <Compile Include="FLAC\FlacPartitionedRiceContent.cs" />
+    <Compile Include="FLAC\FlacPreScan.cs" />
+    <Compile Include="FLAC\FlacPreScanFinishedEventArgs.cs" />
+    <Compile Include="FLAC\FlacPreScanMode.cs" />
+    <Compile Include="FLAC\FlacResidualCodingMethod.cs" />
+    <Compile Include="FLAC\FlacSubFrameData.cs" />
+    <Compile Include="FLAC\Metadata\FlacMetaDataType.cs" />
+    <Compile Include="FLAC\Metadata\FlacMetadata.cs" />
+    <Compile Include="FLAC\Metadata\FlacMetadataSeekTable.cs" />
+    <Compile Include="FLAC\Metadata\FlacMetadataStreamInfo.cs" />
+    <Compile Include="FLAC\Metadata\FlacSeekPoint.cs" />
+    <Compile Include="FLAC\SubFrames\FlacResidual.cs" />
+    <Compile Include="FLAC\SubFrames\FlacSubFrameBase.cs" />
+    <Compile Include="FLAC\SubFrames\FlacSubFrameConstant.cs" />
+    <Compile Include="FLAC\SubFrames\FlacSubFrameFixed.cs" />
+    <Compile Include="FLAC\SubFrames\FlacSubFrameLPC.cs" />
+    <Compile Include="FLAC\SubFrames\FlacSubFrameLPC_Calculation.cs" />
+    <Compile Include="FLAC\SubFrames\FlacSubFrameVerbatim.cs" />
+    <Compile Include="Tags\ID3\ID3Exception.cs" />
+    <Compile Include="Tags\ID3\ID3Genre.cs" />
+    <Compile Include="Tags\ID3\ID3Utils.cs" />
+    <Compile Include="Tags\ID3\ID3Version.cs" />
+    <Compile Include="Tags\ID3\ID3v1.cs" />
+    <Compile Include="Tags\ID3\ID3v2.cs" />
+    <Compile Include="Tags\ID3\ID3v2ExtendedHeader.cs" />
+    <Compile Include="Tags\ID3\ID3v2ExtendedHeaderFlags.cs" />
+    <Compile Include="Tags\ID3\ID3v2Footer.cs" />
+    <Compile Include="Tags\ID3\ID3v2Header.cs" />
+    <Compile Include="Tags\ID3\ID3v2HeaderFlags.cs" />
+    <Compile Include="Tags\ID3\ID3v2ImageEncodingRestriction.cs" />
+    <Compile Include="Tags\ID3\ID3v2ImageSizeRestriction.cs" />
+    <Compile Include="Tags\ID3\ID3v2QuickInfo.cs" />
+    <Compile Include="Tags\ID3\ID3v2TagSizeRestriction.cs" />
+    <Compile Include="Tags\ID3\ID3v2TextEncodingRestriction.cs" />
+    <Compile Include="Tags\ID3\ID3v2TextFieldSizeRestriction.cs" />
+    <Compile Include="Tags\ID3\UnsyncStream.cs" />
+    <Compile Include="Tags\ID3\Frames\BinaryFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\CommentAndLyricsFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\CommercialFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\DataFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\Frame.cs" />
+    <Compile Include="Tags\ID3\Frames\FrameFactory.cs" />
+    <Compile Include="Tags\ID3\Frames\FrameFlags.cs" />
+    <Compile Include="Tags\ID3\Frames\FrameHeader.cs" />
+    <Compile Include="Tags\ID3\Frames\FrameID.cs" />
+    <Compile Include="Tags\ID3\Frames\FrameIDFactory.cs" />
+    <Compile Include="Tags\ID3\Frames\MultiStringTextFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\NumericTextFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\OwnershipFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\PictureFormat.cs" />
+    <Compile Include="Tags\ID3\Frames\PictureFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\Popularimeter.cs" />
+    <Compile Include="Tags\ID3\Frames\ReceivedType.cs" />
+    <Compile Include="Tags\ID3\Frames\TermsOfUseFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\TextFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\TimestampTextFrame.cs" />
+    <Compile Include="Tags\ID3\Frames\UserDefiniedTextFrame.cs" />
+    <Compile Include="WaveFormat.cs" />
+    <Compile Include="AudioEncoding.cs" />
+    <Compile Include="Utils\BitReader.cs" />
+    <Compile Include="Utils\FlacBitReader.cs" />
+    <Compile Include="ChannelMask.cs" />
+    <Compile Include="WaveFormatExtensible.cs" />
+    <Compile Include="AudioSubTypes.cs" />
+    <Compile Include="AudioSubTypes.Utils.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IWaveSource.cs" />
+    <Compile Include="IReadableAudioSource.cs" />
+    <Compile Include="IAudioSource.cs" />
+    <Compile Include="Utils\CRC8.cs" />
+    <Compile Include="Utils\CRCBase.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <None Include="FLAC\FlacFrame_GetBuffer.tt" />
+    <None Include="FLAC\SubFrames\FlacSubFrameLPC_Calculation.tt" />
+    <None Include="AudioSubTypes.tt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tags\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+</Project>
